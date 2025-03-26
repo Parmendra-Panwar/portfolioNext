@@ -1,6 +1,4 @@
-import Image  from "next/image";
 import "./page.css";
-import Link from "next/link";
 import Projects from "@/components/Projects";
 import GetInTouch from "@/components/GetInTouch";
 import Experience from "@/components/Experience";

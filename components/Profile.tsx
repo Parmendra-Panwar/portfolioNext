@@ -7,7 +7,7 @@ export default function Profile() {
         <>
             <section id="profile" className="profile-section">
                 <div className="section__text">
-                    <p className="section__text__p1">Hello, I'm</p>
+                    <p className="section__text__p1">Hello, I am</p>
                     <h1 className="title">Parmendra (paras) Panwar</h1>
                     <p className="section__text__p2">Web Developer</p>
                     <div className="btn-container">
