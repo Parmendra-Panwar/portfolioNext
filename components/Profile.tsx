@@ -11,7 +11,7 @@ export default function Profile() {
                     <h1 className="title">Parmendra (paras) Panwar</h1>
                     <p className="section__text__p2">Web Developer</p>
                     <div className="btn-container">
-                        <Link href={'/assets/ParmendraPanwar.pdf'} download>
+                        <Link href={'/assets/ParmendraPnawarR6.pdf'} download>
                             <button className="btn btn-color-2">
                                 Download CV
                             </button>
