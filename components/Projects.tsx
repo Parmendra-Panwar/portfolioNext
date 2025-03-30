@@ -24,7 +24,7 @@ export default function Projects() {
       image: "/assets/project-3.png",
       github: "https://github.com/Parmendra-Panwar?tab=repositories",
       liveDemo: "",
-    },
+    }, 
     {
       id: 4,
       title: "E-Commerce UI",
