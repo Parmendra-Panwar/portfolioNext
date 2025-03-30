@@ -25,6 +25,20 @@ export default function Projects() {
       github: "https://github.com/Parmendra-Panwar?tab=repositories",
       liveDemo: "",
     },
+    {
+      id: 4,
+      title: "E-Commerce UI",
+      image: "/assets/project-4.png",
+      github: "https://github.com/Parmendra-Panwar/Appscrip-task-ParmendraPanwar",
+      liveDemo: "https://appscrip-task-parmendra.netlify.app/",
+    },
+    {
+      id: 5,
+      title: "Wedding Management Portfolio",
+      image: "/assets/project-5.png",
+      github: "https://github.com/Parmendra-Panwar/Wedding_Management",
+      liveDemo: "https://wedding-guru.vercel.app/",
+    },
   ];
 
   return (
