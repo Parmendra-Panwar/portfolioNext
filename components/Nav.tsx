@@ -27,7 +27,7 @@ export default function Nav() {
               <Link href="#experience">Experience</Link>
             </li>
             <li>
-              <Link href="#projects">Projects</Link>
+              <Link href="/project">Projects</Link>
             </li>
             <li>
               <Link href="#contact">Contact</Link>
@@ -55,7 +55,7 @@ export default function Nav() {
               </Link>
             </li>
             <li>
-              <Link href="#projects" onClick={toggleMenu}>
+              <Link href="/project" onClick={toggleMenu}>
                 Projects
               </Link>
             </li>

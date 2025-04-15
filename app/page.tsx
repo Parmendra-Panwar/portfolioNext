@@ -1,10 +1,8 @@
 import "./page.css";
 import Projects from "@/components/Projects";
-import GetInTouch from "@/components/GetInTouch";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
 import Profile from "@/components/Profile";
-import Nav from "@/components/Nav";
 
 export default function Home() {
   // function toggleMenu() {
@@ -15,12 +13,10 @@ export default function Home() {
   // }
   return (
     <>
-      <Nav />
       <Profile />
       <About />
       <Experience />
       <Projects />
-      <GetInTouch />
     </>
   );
 }
