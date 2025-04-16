@@ -21,10 +21,10 @@ export default function Nav() {
         <div>
           <ul className="nav-links">
             <li>
-              <Link href="#about">About</Link>
+              <Link href="./#about">About</Link>
             </li>
             <li>
-              <Link href="#experience">Experience</Link>
+              <Link href="./#experience">Experience</Link>
             </li>
             <li>
               <Link href="/project">Projects</Link>
