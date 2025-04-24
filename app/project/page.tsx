@@ -2,8 +2,29 @@ import Image from "next/image";
 import "../../app/page.css";
 import Link from "next/link";
 import projects from "./data";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 export default function Projects() {
+     useEffect(() => {
+        const lenis = new Lenis({
+          lerp: 0.15, // Increase lerp for even smoother scroll
+          duration: 1.5, // Slow down the scroll speed
+          easing: (t: number) => Math.sin(t * (Math.PI / 2)), // Using a sine easing function for smoother scrolling
+        });
+    
+        // Raf loop to drive the scroll
+        const raf = (time: number) => {
+          lenis.raf(time); // Update Lenis scroll state
+          requestAnimationFrame(raf); // Keep animating
+        };
+    
+        requestAnimationFrame(raf); // Start animation loop
+    
+        return () => {
+          lenis.destroy(); // Cleanup when the component unmounts
+        };
+      }, []);
     return (
         <section id="projects">
             <p className="section__text__p1">Browse My Recent</p>

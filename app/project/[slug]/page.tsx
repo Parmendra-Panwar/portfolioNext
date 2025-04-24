@@ -2,8 +2,30 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import projects from "../data";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 export default async function Page({ params, }: { params: Promise<{ slug: string }> }) {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.15, // Increase lerp for even smoother scroll
+      duration: 1.5, // Slow down the scroll speed
+      easing: (t: number) => Math.sin(t * (Math.PI / 2)), // Using a sine easing function for smoother scrolling
+    });
+
+    // Raf loop to drive the scroll
+    const raf = (time: number) => {
+      lenis.raf(time); // Update Lenis scroll state
+      requestAnimationFrame(raf); // Keep animating
+    };
+
+    requestAnimationFrame(raf); // Start animation loop
+
+    return () => {
+      lenis.destroy(); // Cleanup when the component unmounts
+    };
+  }, []);
+
   const { slug } = await params
   const project = projects.find((project) => project.id == slug)
   if (!project) return notFound();
